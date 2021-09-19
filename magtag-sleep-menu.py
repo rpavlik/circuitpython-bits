@@ -1,5 +1,17 @@
 # Copyright 2021, Ryan Pavlik <ryan.pavlik@gmail.com>
 # SPDX-License-Identifier: Unlicense
+import time
+from adafruit_magtag.magtag import MagTag
+
+try:
+    from typing import List, Optional
+except ImportError:
+    pass
+
+import board
+import alarm
+import alarm.pin
+import microcontroller
 
 magtag = MagTag(rotation=180)
 
